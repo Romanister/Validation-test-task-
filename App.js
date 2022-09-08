@@ -14,37 +14,37 @@ const submit = () => {
     }
   }
   if (nameReg(Object(Inputs)[0].value) == false) {
-    Object(Inputs)[0].insertAdjacentHTML(
+    Inputs[0].insertAdjacentHTML(
       "afterend",
-      '<div class = "prompt">Введите свое имя, начиная с большой буквы. Имя должно содержать от 2-х до 16 букв.</div>'
+      '<div class = "prompt">Введите свое имя русскими буквами, начиная с большой буквы. Имя должно содержать от 2-х до 18 букв.</div>'
     );
   }
   if (surnameReg(Object(Inputs)[1].value) == false) {
-    Object(Inputs)[1].insertAdjacentHTML(
+    Inputs[1].insertAdjacentHTML(
       "afterend",
-      '<div class = "prompt">Введите свою фамилию, начиная с большой буквы. Фамилия должна содержать от 2-х до 16 букв.</div>'
+      '<div class = "prompt">Введите свою фамилию русскими буквами, начиная с большой буквы. Фамилия должна содержать от 2-х до 18 букв.</div>'
     );
   }
   if (emailReg(Object(Inputs)[2].value) == false) {
-    Object(Inputs)[2].insertAdjacentHTML(
+    Inputs[2].insertAdjacentHTML(
       "afterend",
       '<div class = "prompt">Введите корректный email адрес</div>'
     );
   }
   if (passwordReg(Object(Inputs)[3].value) == false) {
-    Object(Inputs)[3].insertAdjacentHTML(
+    Inputs[3].insertAdjacentHTML(
       "afterend",
       '<div class = "prompt">Минимальная длина пароля 8 символов. Пароль должен содержать минимум одну цифру, по одной заглавной и строчную буквы и один символ.</div>'
     );
   }
   if (Inputs[4].value !== Inputs[3].value) {
-    Object(Inputs)[4].insertAdjacentHTML(
+    Inputs[4].insertAdjacentHTML(
       "afterend",
       '<div class = "prompt">Пароли не совпадают</div>'
     );
   }
   if (Date.now() - Date.parse(Inputs[5].value) < 568036800000) {
-    Object(Inputs)[5].insertAdjacentHTML(
+    Inputs[5].insertAdjacentHTML(
       "afterend",
       '<div class = "prompt">Вам должно быть больше 18 лет</div>'
     );
